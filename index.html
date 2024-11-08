@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>どうぶつえあわせ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    </li>
+    <!-- https://uteee.com/system/program/2975/ -->
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div id="speed"></div>
+        <div id="atari"></div>
+    </header>
+    <div class="result-show" style="display: none;">
+        <h1 class="atari__efect" id="reslut_text"></h1>
+        <img src="img/result-01-hazure.png" alt="">
+        <button type="button" class="btn-reset" value="">もういちど</button>
+
+    </div>
+
+    <div class="result-hide">
+        <div class="janken-show">
+            <h1>じゃんけん</h1>
+            <div class="janken">
+                <button type="button" class="btn-janken-start" data-val=0>はじめる</button>
+            </div>
+
+            <div class="janken-reel" style="display: none;">
+                <div class="janken">
+                    <button type="button" disabled="true" class="btn-janken" data-val="0"><img
+                            src="img/janken-01-gu.png"></button>
+                    <button type="button" disabled="true" class="btn-janken" data-val="1"><img
+                            src="img/janken-02-choki.png"></button>
+                    <button type="button" disabled="true" class="btn-janken" data-val="2"><img
+                            src="img/janken-03-pa.png"></button>
+
+                </div>
+
+                <div class="wrap">
+                    <ul class="janken-aite">
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+
+                    </ul>
+                    <ul class="janken-aite">
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+                    </ul>
+                    <ul class="janken-aite">
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+                        <li class="content"><img src="img/janken-01-gu.png" alt=""></li>
+                        <li class="content"><img src="img/janken-02-choki.png" alt=""></li>
+                        <li class="content"><img src="img/janken-03-pa.png" alt=""></li>
+                    </ul>
+                </div>
+                <div id="janken"></div>
+            </div>
+        </div>
+
+        <div class="slot-show" style="display: none;">
+            <h1>おなじどうぶつをそろえよう</h1>
+            <div class="Slobt-btn-consle">
+                <button type="button" class="btn-start" "disabled=" false">スタート</button>
+            </div>
+            <div class="Slot-outer">
+                <div class="slot">
+                    <div class="slot-frame">
+                        <ul class="reels">
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-07-swan.png"><!-- ダミー  リールのループ始点-->
+                            </li>
+                            <li class="reel"><img src="img/animal-01-unicorn.png"><!-- index[6] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-02-cat.png"><!-- index[5] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-03-rion.png"><!-- index[4] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-04-elphant.png"><!-- index[3] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-05-bird.png"><!-- index[2] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- index[1] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-07-swan.png"><!-- スタート位置 index[0] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-01-unicorn.png"><!-- ダミー リールのループ終点 -->
+                            </li>
+                            <li class="reel"><img src="img/animal-02-cat.png"><!-- ダミー -->
+                            </li>
+
+
+                        </ul>
+                        <ul class="reels">
+
+                            <li class="reel"><img src="img/animal-01-unicorn.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-05-bird.png"><!-- index[6] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-03-rion.png"><!-- index[5] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-07-swan.png"><!-- index[4] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-02-cat.png"><!-- index[3] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-04-elphant.png"><!-- index[2] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-01-unicorn.png"><!-- index[1] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- スタート位置 index[0] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-05-bird.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-03-rion.png"><!-- ダミー -->
+                            </li>
+                        </ul>
+                        <ul class="reels">
+
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-04-elphant.png"><!-- ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-03-rion.png"><!-- index[6] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-07-swan.png"><!-- index[5] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-02-cat.png"><!-- index[4] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-05-bird.png"><!-- index[3] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-01-unicorn.png"><!-- index[2] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-06-dragon.png"><!-- index[1] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-04-elphant.png"><!-- スタート位置 index[0] -->
+                            </li>
+                            <li class="reel"><img src="img/animal-03-rion.png"><!-- ループ位置ダミー -->
+                            </li>
+                            <li class="reel"><img src="img/animal-07-swan.png"><!-- 初期位置 index[5] -->
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn-outer">
+                    <button type="button" class="btn-stop btn-0" data-val="0" disabled="true">ストップ</button>
+                    <button type="button" class="btn-stop btn-1" data-val="1" disabled="true">ストップ</button>
+                    <button type="button" class="btn-stop btn-2" data-val="2" disabled="true">ストップ</button>
+                </div>
+
+                <div class="Slobt-btn-consle">
+                    <button type="button" class="btn-result" disabled="true">けっか</button>
+                    <button type="button" class="btn-kakuhen" style="display: none;">かくへん</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="audio/audio-jankenpon.mp3" id="play-janken"></audio>
+    <audio src="audio/audio-janken-aiko.mp3" id="play-aiko"></audio>
+    <audio src="audio/audio-janken-kachi.mp3" id="play-kachi"></audio>
+    <audio src="audio/audio-janken-make.mp3" id="play-make"></audio>
+        <audio src="audio/audio-slot-atari.mp3" id="slot-atari"></audio>
+        <audio src="audio/audio-slot-hazure.mp3" id="slot-hazure"></audio>
+        <audio src="audio/kakuhen-drumroll.mp3" id="kakuhen-audio"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/set.js"></script>
+</body>
+
+</html>

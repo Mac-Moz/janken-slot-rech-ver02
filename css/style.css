@@ -1,0 +1,235 @@
+HTML CSS JSResult Skip Results Iframe EDIT ON body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #dab1f5;
+    background-image: url('pixel_texture.png');
+    background-repeat: repeat;
+}
+
+/* buttonタグの書式を統一して設定 */
+button {
+    background-color: #06b0e3;
+    border: none;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+
+/* buttonがdisabledの場合にはhoverの操作が無効になる */
+button[disabled] {
+    pointer-events: none;
+}
+
+button:hover {
+    background-color: #f5bdc8;
+}
+
+ul {
+    list-style: none;
+    top:50px;
+}
+
+/* じゃんけんの設定 */
+
+.janken img {
+    width: 100px;
+    height: 100px;
+}
+
+.wrap {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    overflow: hidden;
+
+    border-radius: 12px;
+
+   
+}
+
+.janken-aite {
+    display: flex;
+}
+
+
+.janken-aite img {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-janken-start{
+margin-bottom: 30px;
+}
+
+#janken{
+display: flex;
+background-color: #dab1f5;
+margin: 20px;
+width: 50%;
+}
+#janken img{
+    width: 100px;
+    border-radius: 20px;
+}
+
+/* じゃんけんのループスライド */
+.slideshow {
+    animation: loop-slide 1s infinite linear .1s both;
+}
+
+@keyframes loop-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+/* スロットに関する設定 */
+
+.slot {
+    /* width: 90%; */
+    /* height: 50%; */
+    overflow: hidden;
+    /* border: solid 40px #f3eeee;
+    border-radius: 3%; */
+    /* padding: 0.5em 1em; */
+    /* margin: 4em 0; */
+    color: #FFF;
+    background: #6eb7ff;
+    border-bottom: solid 6px #3f87ce;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.slot-frame {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border: solid #f5eded;
+}
+
+/* コンテンツの幅と相対的な位置を指定 */
+.reels {
+    width: 33%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+/* リールの横位置を設定 */
+.reels:nth-child(1) {
+    left: 0;
+}
+
+.reels:nth-child(2) {
+    left: 33%;
+}
+
+.reels:nth-child(3) {
+    right: 0;
+}
+/* コンテンツの高さを指定　初期位置にかかわる重要なパラメータ */
+.reel {
+    height: 270px;
+}
+
+.reel img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.Slot-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.Slobt-btn-consle button {
+    width: 100px;
+    height: 50px;
+    border-radius: 20%;
+    margin-bottom: 30px;
+}
+
+.btn-outer {
+    /* width: 90%; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-stop {
+    /* width: 200px;
+    height: 80px; */
+    /* margin-left: 20%;
+    margin-right: 5%; */
+    border-radius: 5px;
+}
+
+.atari__efect {
+    font-size: 100px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 0.04em rgba(255, 255, 255, 0.5);
+}
+.atari{
+    display: absolute;
+    top:100px;
+    left: 200px;
+    color: #f5eded;
+}
+
+.header {
+display: flex;
+align-items: flex-start;
+}
+
+.header div{
+    margin: 5px;
+    font-size: 30px;
+}
+
+.header_animation{
+animation: header_score 2s forwards;
+}
+
+@keyframes header_score {
+    0%{
+        font-size: 15px;
+        color: chartreuse;
+    }
+    100%{
+
+
+    }
+    
+}
+
+.result-show img{
+    width: 500px;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
